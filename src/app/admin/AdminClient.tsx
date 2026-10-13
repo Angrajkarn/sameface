@@ -329,10 +329,10 @@ export default function AdminClient() {
           <div className="p-5 rounded-2xl bg-zinc-950/80 border border-zinc-800">
             <span className="text-xs font-mono text-zinc-400 uppercase">Founder Pass Allocation</span>
             <div className="text-3xl font-black text-amber-300 mt-1">
-              {Math.min(100, waitlist.length)} / 100
+              {Math.min(10000, waitlist.length)} / 10,000
             </div>
             <div className="text-[11px] text-zinc-400 mt-1 font-mono">
-              {Math.max(0, 100 - waitlist.length)} remaining
+              {Math.max(0, 10000 - waitlist.length)} remaining
             </div>
           </div>
 

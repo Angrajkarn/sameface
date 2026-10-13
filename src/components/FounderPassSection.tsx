@@ -41,19 +41,19 @@ export default function FounderPassSection() {
           </h2>
 
           <p className="text-zinc-300 text-sm sm:text-base leading-relaxed">
-            Reserved exclusively for the first 100 creators and animation studios. Guarantee your lifetime 50% discount and jump the queue on world premiere day.
+            Reserved exclusively for the first 10,000 creators and animation studios. Guarantee your lifetime 50% discount and jump the queue on world premiere day.
           </p>
 
           {/* Allocation Progress Bar */}
           <div className="max-w-md mx-auto pt-2">
             <div className="flex items-center justify-between text-xs font-mono mb-1.5">
               <span className="text-zinc-400 font-semibold">Founder Allocation Cap:</span>
-              <span className="text-amber-400 font-bold">72 / 100 Claimed (28 Remaining)</span>
+              <span className="text-amber-400 font-bold">7,420 / 10,000 Claimed (2,580 Remaining)</span>
             </div>
             <div className="h-2 w-full rounded-full bg-zinc-900 border border-white/10 overflow-hidden p-0.5">
               <div
                 className="h-full rounded-full bg-gradient-to-r from-blue-500 via-indigo-500 to-amber-400 shadow-[0_0_12px_rgba(251,191,36,0.5)] transition-all duration-500"
-                style={{ width: "72%" }}
+                style={{ width: "74.2%" }}
               />
             </div>
           </div>
