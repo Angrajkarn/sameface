@@ -7,6 +7,7 @@ import {
   saveWaitlistRecord,
   type WaitlistRecord,
 } from "@/lib/security";
+import { sendSubscriberWelcomeEmail } from "@/lib/email";
 
 interface WaitlistPayload {
   email: string;
@@ -84,6 +85,16 @@ export async function POST(req: Request) {
     // ── 4. Save to Persistent Server Ledger (Bulletproof Zero-Loss) ──
     saveWaitlistRecord(leadRecord);
     console.info(`⚡ [Enterprise Security] New Verified Lead: ${normalizedEmail} (Pass: ${passCode})`);
+
+    // ── 5. Enterprise Non-Blocking Welcome Email to Subscriber ──
+    sendSubscriberWelcomeEmail({
+      email: normalizedEmail,
+      passCode,
+      discountCode,
+      creditsGranted,
+      idea: sanitizedIdea,
+      useCase: sanitizedUseCase,
+    }).catch((emailErr) => console.warn("Email dispatch notice:", emailErr));
 
     // ── 5. Enterprise Google Sheets / Google Workspace Webhook ──
     const googleSheetWebhook =
