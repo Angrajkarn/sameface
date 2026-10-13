@@ -64,8 +64,15 @@ export default function Navbar({
             Consistency Engine
           </a>
           <a
+            href="#founder-pass"
+            className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 hover:text-amber-200 font-bold transition-all hover:scale-105"
+          >
+            <span>💎</span>
+            <span>Founder Pass</span>
+          </a>
+          <a
             href="#multilingual"
-            className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500/10 border border-amber-400/25 text-amber-300 hover:text-amber-200 font-semibold transition-all hover:scale-105"
+            className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-500/10 border border-blue-400/25 text-blue-300 hover:text-blue-200 font-semibold transition-all hover:scale-105"
           >
             <span>🇮🇳</span>
             <span>14+ Languages</span>
@@ -77,16 +84,10 @@ export default function Navbar({
             Auto-Publish
           </a>
           <a
-            href="#pipeline"
-            className="hover:text-white transition-colors duration-200"
-          >
-            How It Works
-          </a>
-          <a
             href="#pricing"
             className="hover:text-white transition-colors duration-200"
           >
-            Pricing &amp; 50% Off
+            Pricing
           </a>
           <a
             href="#faq"

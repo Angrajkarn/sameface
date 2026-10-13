@@ -11,6 +11,8 @@ import MultilingualSection from "@/components/MultilingualSection";
 import SocialAutomationSection from "@/components/SocialAutomationSection";
 import EnterpriseFooter from "@/components/EnterpriseFooter";
 import LiveLeadToast from "@/components/LiveLeadToast";
+import LaunchCountdown from "@/components/LaunchCountdown";
+import FounderPassSection from "@/components/FounderPassSection";
 
 const c = SITE.mascot;
 
@@ -173,6 +175,9 @@ export default function MascotClient() {
             <VidAiHeroVideoMockup />
           </div>
         </div>
+
+        {/* ──── WORLD PREMIERE COUNTDOWN (NOV 5, 2026) ──── */}
+        <LaunchCountdown />
       </section>
 
       {/* ──── INFINITE TESTIMONIAL MARQUEE ──── */}
@@ -328,6 +333,9 @@ export default function MascotClient() {
           </div>
         </div>
       </section>
+
+      {/* ──── ULTRA-MODERN VIP FOUNDER PASS SECTION ──── */}
+      <FounderPassSection />
 
       {/* ──── PRICING TIERS ──── */}
       <section id="pricing" className="py-24 px-4 sm:px-6 lg:px-8 border-t border-zinc-900 bg-[#070b17]/60">
