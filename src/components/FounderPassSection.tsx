@@ -1,10 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function FounderPassSection() {
   const [previewEmail, setPreviewEmail] = useState("");
   const [copiedToken, setCopiedToken] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const displayHandle = previewEmail.trim()
     ? previewEmail.split("@")[0].toUpperCase()
@@ -40,13 +45,13 @@ export default function FounderPassSection() {
             </span>
           </h2>
 
-          <p className="text-zinc-300 text-sm sm:text-base leading-relaxed">
+          <p suppressHydrationWarning className="text-zinc-300 text-sm sm:text-base leading-relaxed">
             Reserved exclusively for the first 10,000 creators and animation studios. Guarantee your lifetime 50% discount and jump the queue on world premiere day.
           </p>
 
           {/* Allocation Progress Bar */}
           <div className="max-w-md mx-auto pt-2">
-            <div className="flex items-center justify-between text-xs font-mono mb-1.5">
+            <div suppressHydrationWarning className="flex items-center justify-between text-xs font-mono mb-1.5">
               <span className="text-zinc-400 font-semibold">Founder Allocation Cap:</span>
               <span className="text-amber-400 font-bold">7,420 / 10,000 Claimed (2,580 Remaining)</span>
             </div>
